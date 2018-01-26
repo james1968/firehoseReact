@@ -13,12 +13,34 @@
 			var App = function() {
 				return (
 					<div className='App'>
-					<h1 className='title'>
-						Flashback
-					</h1>
+						<h1 className='title'>
+							Flashback
+						</h1>
+						<p className='sub-title'>
+							An alternative flashcard app.
+						</p>
+						<div className="card-list">
+							{Card()}
+						</div>
 					</div>
 				);
 			};
+
+			var Card = function () {
+				return (
+					<div className='Card -front'>
+						<div className="front">
+							<h3 className='question'>
+								You may know that React was created at __________.
+							</h3>
+							<p className='hint'>
+								<span>Hint:</span> This companys site is known for being written in PHP. 
+							</p>
+						</div>
+					</div>
+				);
+			};
+
 			ReactDOM.render(App(), document.getElementById('app'));
 		</script>
 	</body>
